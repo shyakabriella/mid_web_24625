@@ -1,0 +1,98 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>org.example.web.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/user-register</url-pattern>
+    </servlet-mapping>
+
+    <!-- Map dashboard JSP -->
+    <servlet>
+        <servlet-name>dashboard</servlet-name>
+        <jsp-file>/dashboard.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dashboard</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Additional JSP mappings -->
+    <servlet>
+        <servlet-name>books</servlet-name>
+        <jsp-file>/books.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>books</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>borrowers</servlet-name>
+        <jsp-file>/borrowers.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>borrowers</servlet-name>
+        <url-pattern>/borrowers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>memberships</servlet-name>
+        <jsp-file>/memberships.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>memberships</servlet-name>
+        <url-pattern>/memberships</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>locations</servlet-name>
+        <jsp-file>/locations.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>locations</servlet-name>
+        <url-pattern>/locations</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>users</servlet-name>
+        <jsp-file>/users.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>users</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>shelves</servlet-name>
+        <jsp-file>/shelves.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>shelves</servlet-name>
+        <url-pattern>/shelves</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>rooms</servlet-name>
+        <jsp-file>/rooms.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rooms</servlet-name>
+        <url-pattern>/rooms</url-pattern>
+    </servlet-mapping>
+
+
+    <listener>
+        <listener-class>org.example.listeners.AppContextListener</listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

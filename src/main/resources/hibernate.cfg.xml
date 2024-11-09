@@ -1,0 +1,33 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/auca_library_db?useSSL=false</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Set the current session context -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Update the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mention all annotated classes here -->
+        <mapping class="org.example.model.User"/>
+        <mapping class="org.example.model.Membership"/>
+        <mapping class="org.example.model.Location"/>
+        <mapping class="org.example.model.MembershipType"/>
+        <mapping class="org.example.model.Shelf"/>
+        <mapping class="org.example.model.Room"/>
+        <!-- Add more as needed -->
+    </session-factory>
+</hibernate-configuration>
